@@ -98,6 +98,11 @@ font-family:Papyrus;
     border-radius:3px;
     font-size: 20px;
 }
+.iconbtn:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
 .iconimage{
     width:25px;
     height:25px;
