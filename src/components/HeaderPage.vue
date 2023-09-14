@@ -56,7 +56,7 @@
       <div class="navbar-item">
         <div class="buttons">
  
-          <a class="button " style='background-color:black'>
+          <a class="button " @click="centerDialogVisible = true" style='background-color:black'>
             Newsletter
           </a>
            <a class="button " style='background-color:black'>
@@ -67,11 +67,31 @@
     </div>
   </div>
 </nav>
+<el-dialog v-model="centerDialogVisible" title="Subscribe for Tips" width="30%" center>
+    <span>
+      Enter your email to subscribe to our Newsletter
+      <br/>
+      <input type="email" style="border:0px; border-bottom: 1px solid #d5a341"/>
+    </span>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="centerDialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="centerDialogVisible = false">
+          Confirm
+        </el-button>
+      </span>
+    </template>
+  </el-dialog>
   </div>
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      centerDialogVisible:false
+    }
+  }
 
 }
 </script>
@@ -100,6 +120,9 @@ a:hover{
   text-decoration:#d5a341 ;
   background-color: black;
   color:#d5a341
+}
+.dialog-footer button:first-child {
+  margin-right: 10px;
 }
 
 </style>
