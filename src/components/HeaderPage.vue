@@ -59,6 +59,9 @@
           <a class="button " style='background-color:black'>
             Newsletter
           </a>
+           <a class="button " style='background-color:black'>
+            Calculator
+          </a>
         </div>
       </div>
     </div>
